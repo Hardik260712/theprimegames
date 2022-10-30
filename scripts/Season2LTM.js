@@ -7,7 +7,7 @@ function randomNumBetween0and100PerSec(){
 
 function spawnMonsters() {
         setInterval(() => {
-        const radius = Math.random() * (70 - 10) + 10
+        const radius = Math.random() * (150 - 8) + 8
         
         let x 
         let y 
@@ -30,7 +30,7 @@ let color = `rgb(${randomNum(0,255)},${randomNum(0,255)},${randomNum(0,255)})`
 
 
         monsters.push(new Monster(x,y,radius,color,velocity))
-    },2500)
+    },2800)
 }
 
 function animate(){
@@ -124,7 +124,7 @@ function animate(){
                 if (monster.radius - 10 > 10){
                     gsap.to(monster, {radius:monster.radius-5})
                     if(tripleShootPwrUp === true){
-                      gsap.to(monster , {radius:monster.radius -15})
+                      gsap.to(monster , {radius:monster.radius -25})
                     }
                     if(shockwavePWRUp === true){
                         gsap.to(monster,{radius:monster.radius - 17})
@@ -242,7 +242,7 @@ if(i >=3){
     },1000)
 
     setInterval(() => {
-        if(guardLevel === true && guardsSpawned <= 5){
+        if(guardLevel === true && guardsSpawned <= 13){
             guardsSpawned += 1
         const radius = 300
         
@@ -327,7 +327,7 @@ if(i >=3){
             }, 20000);
 
             setInterval(() => {
-                if(Math.round(Math.random()) === 200){
+                if(Math.round(Math.random()*300) === 300){
                     tripleShootPwrUp = true
                     tripleShooterPlayer.x = player.x
                     tripleShooterPlayer.y = player.y
