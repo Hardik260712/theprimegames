@@ -1,6 +1,4 @@
-Of course. Based on the code you provided, here is a complete README file for your game.
 
-***
 
 # Canvas Shooter Game
 
