@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homepage
+    </title>
+    <style>
+        
+    </style>
+</head>
+<body style= 'background-color: black;'>
+    
+    <center><image  height = 300 src ='C:\Hardik Coding\KingGames\Glitched\Mission Reboot text 2.png' style = 'width: 600px; height:200px;'></image></center>
+    
+    <center>
+        <a style="background-color: rgb(24, 24, 24);
+        color: #fff; 
+        cursor: pointer; 
+        padding: 10px 30px; 
+        font-size: 3vw;
+        text-decoration: none;" href ='C:\Hardik Coding\KingGames\Glitched\index.html' onclick = 'checkForModeSwitch()'>Play</a>
+        <br><br>
+        <span style= 'color: white;'>Story Mode</span><input type ="radio" id = 'story mode radio' name = 'Mode'><br>
+        <span style= 'color: white;'>Endless Mode(no movement and no boss)</span><input type ="radio" id = 'endless mode radio' name = 'Mode'><br>
+        <span style= 'color: white;' >LTM Mode(christmas special) </span><input type ="radio" id = 'LTM mode radio' name = 'Mode'><br>
+    </center>
+    <a style="background-color: rgb(24, 24, 24);
+    color: #fff; 
+    cursor: pointer; 
+    padding: 10px 30px; 
+    font-size: 1vw;
+    text-decoration: none;" href ='glitched.w3spaces.com'>Changelog</a>
+    <br>
+    <br>
+    <a style="background-color: rgb(24, 24, 24);
+    color: #fff; 
+    cursor: pointer; 
+    padding: 10px 30px; 
+    font-size: 1vw;
+    text-decoration: none;" href =''>About/How to Play</a>
+    
+    <script>
+        const storyModeRadio = document.getElementById('story mode radio')
+        const endlessModeRadio = document.getElementById('endless mode radio')
+        const LTMModeRadio = document.getElementById('LTM mode radio')
+        function checkForModeSwitch(){
+            if(storyModeRadio.checked === true){
+            localStorage.setItem('mode', 'story mode')
+            }else if(endlessModeRadio.checked === true){
+            localStorage.setItem('mode', 'endless mode')
+            }else if(LTMModeRadio.checked === true){
+            localStorage.setItem('mode', 'LTM')
+            }
+        }
+    </script>
+</body>
+</html>
